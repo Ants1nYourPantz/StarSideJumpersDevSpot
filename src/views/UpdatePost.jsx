@@ -53,7 +53,6 @@ export default function UpdatePost({ loggedIn, flashMessage, post }) {
 
         let requestContent = JSON.stringify({ title, content })
 
-        // Make the fetch request
         let response = await fetch(`https://kekambas-blog-api.onrender.com/api/posts/${params.postId}`, {
             method: 'PUT',
             headers: myHeaders,
@@ -80,12 +79,12 @@ export default function UpdatePost({ loggedIn, flashMessage, post }) {
 
     return (
         <>
-            <h3 className="text-center  text-white">Edit a Post</h3>
+            <h4 className="text-center text-white my-5">Make any changes to your post in the boxes below</h4>
             <form action="" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <input type="text" name="title" className="form-control my-3" placeholder='Enter Title' value={title} onChange={updatePostTitle} />
                     <textarea name="content" className="form-control my-3" placeholder='Enter content' value={content} onChange={updatePostContent} />
-                    <input type="submit" value="Edit Post" className='btn btn-success w-50' />
+                    <input type="submit" value="Submit Changes" className='btn btn-secondary w-50' />
                     <input type="submit" value="Delete Post" className='btn btn-danger w-50' onClick={handleDelete} />
                 </div>
             </form>

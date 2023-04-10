@@ -33,8 +33,8 @@ function App() {
 
 
     let post = {
-        title: 'type here',
-        content: 'type here',
+        title: 'Change your title here...',
+        content: 'Change your post content here...',
     }
 
 

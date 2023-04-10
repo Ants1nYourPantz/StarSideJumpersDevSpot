@@ -44,7 +44,7 @@ export default function Register({ flashMessage }) {
 
     return (
         <>
-            <h3 className="text-center  text-white">Sign Up Here!</h3>
+            <h3 className="text-center text-white my-5">Sign Up Here!</h3>
             <form action="" onSubmit={handleRegister}>
                 <div className="form-group">
                     <input type="text" name="firstName" className="form-control my-3" placeholder='Enter First Name' />

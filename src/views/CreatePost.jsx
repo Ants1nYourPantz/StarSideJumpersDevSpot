@@ -49,7 +49,7 @@ export default function CreatePost({ loggedIn, flashMessage }) {
 
     return (
         <>
-            <h3 className="text-center text-white">Create A Post!</h3>
+            <h3 className="text-center text-white my-5">Create A Post!</h3>
             <form action="" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <input type="text" name="title" className="form-control my-3" placeholder='Enter Title' />
