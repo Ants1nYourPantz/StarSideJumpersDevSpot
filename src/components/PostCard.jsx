@@ -3,16 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function PostCard({ post }) {
 
-    const randomNumber = Math.floor(Math.random() * 1000) + 1;
-    const imageURL = `https://picsum.photos/500?random=${randomNumber}`
-
-
     return (
         <div className="card mt-3 bg-dark">
             <div className="row g-0 bg-dark">
-                <div className="col-md-4 bg-dark">
-                    <img className="card-img-top bg-dark" src={imageURL} alt="random" />
-                </div>
                 <div className="col-md-8 bg-dark">
                     <div className="card-body bg-dark">
                         <div className='position-absolute bottom end-0 mx-2 my-1'>

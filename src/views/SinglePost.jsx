@@ -8,7 +8,7 @@ export default function SinglePost() {
     const [post, setPost] = useState({});
     
     useEffect(() => {
-        fetch(`https://kekambas-blog-api.onrender.com/api/posts/${params.postId}`)
+        fetch(`http://127.0.0.1:5000/api/posts/${params.postId}`)
             .then(res => res.json())
             .then(data => {
                 setPost(data)

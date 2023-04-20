@@ -21,7 +21,7 @@ export default function UpdatePost({ loggedIn, flashMessage, post }) {
         let myHeaders = new Headers();
         myHeaders.append('Authorization', `Bearer ${token}`);
 
-        let response = await fetch(`https://kekambas-blog-api.onrender.com/api/posts/${params.postId}`, {
+        let response = await fetch(`http://127.0.0.1:5000/api/posts/${params.postId}`, {
             method: 'DELETE',
             headers: myHeaders,
         });
@@ -53,7 +53,7 @@ export default function UpdatePost({ loggedIn, flashMessage, post }) {
 
         let requestContent = JSON.stringify({ title, content })
 
-        let response = await fetch(`https://kekambas-blog-api.onrender.com/api/posts/${params.postId}`, {
+        let response = await fetch(`/api/posts/${post.id}`, {
             method: 'PUT',
             headers: myHeaders,
             body: requestContent

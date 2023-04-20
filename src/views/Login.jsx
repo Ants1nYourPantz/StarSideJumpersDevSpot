@@ -16,7 +16,7 @@ export default function Login({ flashMessage, logUserIn }) {
         let myHeaders = new Headers();
         myHeaders.append('Authorization', `Basic ${btoa(stringToEncode)}`);
 
-        let response = await fetch('https://kekambas-blog-api.onrender.com/api/token', {
+        let response = await fetch('http://127.0.0.1:5000/api/token', {
             method: 'POST',
             headers: myHeaders
         });
@@ -48,10 +48,10 @@ export default function Login({ flashMessage, logUserIn }) {
         <>
             <h3 className="text-center text-white my-5">Log In Here!</h3>
             <form action="" onSubmit={handleLogin}>
-                <div className="form-group">
-                    <input type="text" name="username" className="form-control my-3" placeholder='Enter Username' />
-                    <input type="password" name="password" className="form-control my-3" placeholder='Enter Password' />
-                    <input type="submit" value="Log In" className='btn btn-secondary w-100' />
+            <div class="form-group text-center d-flex flex-column justify-content-center align-items-center">
+                    <input type="text" name="username" className="form-control my-1 w-50" placeholder='Enter Username...' />
+                    <input type="password" name="password" className="form-control my-1 w-50" placeholder='Enter Password...' />
+                    <input type="submit" value="Log In" className='btn btn-warning w-50 my-3' />
                 </div>
             </form>
         </>

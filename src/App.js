@@ -8,6 +8,7 @@ import Login from './views/Login';
 import Register from './views/Register';
 import SinglePost from './views/SinglePost';
 import UpdatePost from './views/UpdatePost';
+import Ticket from './views/Ticket';
 
 
 function App() {
@@ -47,8 +48,8 @@ function App() {
                     <Route path='/' element={<Home />} /> 
                     <Route path='/register' element={<Register flashMessage={flashMessage} />} />
                     <Route path='/login' element={<Login flashMessage={flashMessage} logUserIn={setLoggedIn} />} />
-                    {/* <Route path='/userinfo' element={<UserInfo />} /> */}
                     <Route path='/create' element={<CreatePost flashMessage={flashMessage} loggedIn={loggedIn} />} />
+                    <Route path='/ticket' element={<Ticket flashMessage={flashMessage} loggedIn={loggedIn} />} />
                     <Route path='/posts/:postId' element={<SinglePost />} />
                     <Route path='/posts/:postId/edit' element={<UpdatePost post={post} flashMessage={flashMessage} loggedIn={loggedIn} />} />
                 </Routes>

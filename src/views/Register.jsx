@@ -25,7 +25,7 @@ export default function Register({ flashMessage }) {
                 password
             })
 
-            fetch('https://kekambas-blog-api.onrender.com/api/users', {
+            fetch('http://127.0.0.1:5000/api/users', {
                 method: 'POST',
                 headers: myHeaders,
                 body: formData
@@ -46,14 +46,14 @@ export default function Register({ flashMessage }) {
         <>
             <h3 className="text-center text-white my-5">Sign Up Here!</h3>
             <form action="" onSubmit={handleRegister}>
-                <div className="form-group">
-                    <input type="text" name="firstName" className="form-control my-3" placeholder='Enter First Name' />
-                    <input type="text" name="lastName" className="form-control my-3" placeholder='Enter Last Name' />
-                    <input type="text" name="email" className="form-control my-3" placeholder='Enter Email' />
-                    <input type="text" name="username" className="form-control my-3" placeholder='Enter Username' />
-                    <input type="password" name="password" className="form-control my-3" placeholder='Enter Password' />
-                    <input type="password" name="confirmPass" className="form-control my-3" placeholder='Confirm Password' />
-                    <input type="submit" value="Sign Up" className='btn btn-success w-100' />
+            <div class="form-group text-center d-flex flex-column justify-content-center align-items-center">
+                    <input type="text" name="firstName" className="form-control text-center my-1 w-50" placeholder='Enter First Name' />
+                    <input type="text" name="lastName" className="form-control text-center my-1 w-50" placeholder='Enter Last Name' />
+                    <input type="text" name="email" className="form-control text-center my-1 w-50" placeholder='Enter Email' />
+                    <input type="text" name="username" className="form-control text-center my-1 w-50" placeholder='Enter Username' />
+                    <input type="password" name="password" className="form-control text-center my-1 w-50" placeholder='Enter Password' />
+                    <input type="password" name="confirmPass" className="form-control text-center my-1 w-50" placeholder='Confirm Password' />
+                    <input type="submit" value="Sign Up" className='btn btn-warning w-50 my-3' />
                 </div>
             </form>
         </>

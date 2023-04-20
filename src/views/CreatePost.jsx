@@ -14,6 +14,7 @@ export default function CreatePost({ loggedIn, flashMessage }) {
     })
 
     async function handleSubmit(e){
+        console.log(handleSubmit(e));
         e.preventDefault();
 
 
@@ -31,7 +32,7 @@ export default function CreatePost({ loggedIn, flashMessage }) {
 
         let requestContent = JSON.stringify({ title, content })
 
-        let response = await fetch('https://kekambas-blog-api.onrender.com/api/posts', {
+        let response = await fetch('http://127.0.0.1:5000/api/posts', {
             method: 'POST',
             headers: myHeaders,
             body: requestContent
@@ -49,12 +50,12 @@ export default function CreatePost({ loggedIn, flashMessage }) {
 
     return (
         <>
-            <h3 className="text-center text-white my-5">Create A Post!</h3>
+            <h4 className="text-center text-white my-5">Submit your level designs or suggestions here...</h4>
             <form action="" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <input type="text" name="title" className="form-control my-3" placeholder='Enter Title' />
-                    <textarea name="content" className="form-control my-3" placeholder='Enter content' />
-                    <input type="submit" value="Create Post" className='btn btn-secondary w-100' />
+                <div className="form-group text-center">
+                    <input type="text" name="title" className="form-control my-3" placeholder='Please use either "LEVEL DESIGN" or "SUGGESTION"' />
+                    <textarea name="content" className="form-control my-3" placeholder="Level Design or comment here..." />
+                    <input type="submit" value="Submit" className='btn btn-warning w-50' />
                 </div>
             </form>
         </>
